@@ -1,0 +1,167 @@
+@keyframes my-animation {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav{
+    &--copy{
+        display: none;
+        height: 70px;
+        &-visible{
+            display: block;
+        }
+    }
+    padding: 0 6px;
+    padding-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Open Sans';
+    // font-size: 14px;
+    // line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    &__main{
+        list-style-type: none;
+        display: flex;
+        &-item{
+            a{
+                color: #000;
+                text-decoration: none;
+                display: block;
+                padding: 16px 36px 16px 25px;
+                width: auto;
+                height: 50px;
+                margin-left: -1px;
+                margin-top: 4px;
+                transition: all .4s;
+                position: relative;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--green);
+                    color: #fff;
+                }
+            }
+            &-mini{
+                width: 100%;
+                color: #000;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                right: 1px;
+                z-index: 100;
+                transform: translateY(100%);
+                display: none;
+                animation: my-animation .5s linear;
+                &--active{
+                    display: block;
+                }
+                ul{
+                    list-style-type: none;
+                    li{
+                        margin-bottom: 5px;
+                        text-align: center;
+                        padding: 5px;
+                        &:hover{
+                            background-color: #fd4f10;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            &:first-child{
+                img{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    &__profile{
+        display: flex;
+        margin-top: -6px;
+        // margin-left: 1px;
+    }
+    &__cab{
+        padding: 25px 59px 17px 25px;
+        position: relative;
+        cursor: pointer;
+        transition: all .5s;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: url(../icons/user.png) center center/cover no-repeat;
+            top: 24px;
+            left: -14px;
+        }
+        &:hover{
+            color: var(--green);
+        }
+    }
+    &__cart{
+        cursor: pointer;
+        transition: all .5s;
+        padding: 25px 20px 17px 25px;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;;
+            width: 23px;
+            height: 21px;
+            background: url(../icons/cart.png) center center/cover no-repeat;
+            top: 24px;
+            left: -14px;
+        }
+        &:hover{
+            color: var(--green);
+        }
+        &-count{
+            min-width: 11px;
+            height: 11px;
+            padding: 2px;
+            background-color: #fd4f10;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fff;
+            position: absolute;
+            top: 22px;
+            left: 5px;
+        }
+    }
+    &--fixed{
+        position: fixed;
+        width: 1140px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        z-index: 100;
+        padding-top: 0;
+        animation: my-animation 1s linear;
+    }
+    &-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        display: none;
+        height: 55px;
+        width: 100%;
+        z-index: 50;
+        &--active{
+            display: block;
+            animation: my-animation .5s linear;
+        }
+    }
+}

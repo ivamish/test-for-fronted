@@ -1,0 +1,29 @@
+.title{
+    text-align: center;
+    font-family: Lemon;
+    font-size: 60px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #32505a;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    column-gap: 33px;
+    &::before{
+        content: '';
+        display: block;
+        width: 109px;
+        height: 40px;
+        background: url(../img/title_left.png) center center/cover no-repeat;
+        margin-top: -6px;
+        // padding-right: 5px;
+    }
+    &::after{
+        content: '';
+        display: block;
+        width: 109px;
+        height: 40px;
+        background: url(../img/title_right.png) center center/cover no-repeat;
+        margin-top: -6px;
+    }
+}

@@ -1,0 +1,79 @@
+.header {
+    &__info{
+        padding-top: 9px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 384px;
+    }
+    &__logo{
+        width: 190px;
+        height: 69px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__street, &__mail{
+        font-family: 'Myriad Pro';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &__street{
+        align-self: center;
+        justify-self: start;
+        margin-left: -1px;
+        margin-top: -3px;
+        letter-spacing: 0.01rem;
+        &::before{
+            content: '';
+            width: 11px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../icons/maps.png) center center/cover no-repeat;
+            margin-top: -8px;
+            margin-left: -3px;
+        }
+    }
+
+    &__mail{
+        align-self: center;
+        font-size: 14px;
+        margin-top: -2px;
+        margin-left: 54px;
+        // letter-spacing: 0.01rem;
+        &::before{
+            content: '';
+            width: 12px;
+            height: 9px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../icons/envelope.png) center center/cover no-repeat;
+            margin-top: -5px;
+            margin-left: -3px;
+        }
+    }
+
+    &__phone{
+        display: flex;
+        column-gap: 1px;
+        &-text{
+            font-family: 'Open Sans';
+            font-size: 10px;
+            // line-height: 1.2;
+            font-weight: 400;
+            margin-top: 11px;
+            margin-left: 32px;
+            span{
+                display: block;
+                font-size: 18px;
+                // line-height: 1.2;
+                font-weight: 700;
+            }
+        }
+        &-btn{
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+    }
+}

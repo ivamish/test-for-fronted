@@ -1,0 +1,29 @@
+.odds{
+    padding-top: 60px;
+    padding-bottom: 167px;
+    &__img{
+        margin: 0 auto;
+        margin-top: -14px;
+        margin-left: -22px;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__descr{
+        margin-top: 22px;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: #4d4d4d;
+        text-align: center;
+        margin-top: 105px;
+        column-gap: 36px;
+        row-gap: 38px;
+    }
+}

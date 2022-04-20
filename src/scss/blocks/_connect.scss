@@ -1,0 +1,72 @@
+.connect{
+    height: 356px;
+    padding-top: 68px;
+    background: url(../img/bg_connect.jpg) center center/cover no-repeat;
+    &__subtitle{
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    &__title{
+        font-family: lemon;
+        font-size: 54px;
+        line-height: 30px;
+        color: #ffffff;
+        font-weight: 100;
+        margin-top: 12px;
+    }
+    &__input{
+        width: 241px;
+        height: 38px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ffffff;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #ffffff;
+        padding-left: 8px;
+        margin-top: 10px;
+        &::placeholder{
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+        &:focus{
+            background-color: rgba($color: #ffffff, $alpha: 0.14);
+        }
+    }
+    &__btn{
+        width: 192px;
+        height: 48px;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    &__agree{
+        opacity: 0.7;
+        font-size: 12px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #ffffff;
+        margin-top: 27px;
+    }
+    &__flex{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        width: 766px;
+        padding-left: 4px;
+    }
+    &__form{
+        width: 100%;
+        margin-top: 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

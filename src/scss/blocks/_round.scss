@@ -1,0 +1,20 @@
+.round{
+    width: 54px;
+    height: 54px;
+    background-image: linear-gradient(0.0deg, #d44434 0%, #f75b49 100%);
+    box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.38);
+    border-radius: 100%;
+    position: absolute;
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &--veg{
+        background-image: linear-gradient(0.0deg, #196c00 0%, #58a506 100%);
+    }
+}
