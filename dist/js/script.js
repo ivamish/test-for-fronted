@@ -2180,15 +2180,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   document.querySelectorAll('.market__item-btn').forEach(function (el) {
     el.addEventListener('click', function (e) {
-      var count = +e.target.parentNode.querySelector('.market__item-count span').innerHTML;
+      e.stopPropagation();
+      var count = +e.target.closest('.market__item').querySelector('.market__item-count span').innerHTML;
       var cartCount = document.querySelector('.nav__cart-count');
       var success = document.createElement('div');
       success.classList.add('market__item-success');
       success.innerHTML = "Товар добавлен в корзину!";
       cartCount.innerHTML = +cartCount.innerHTML + count;
 
-      if (!e.target.parentNode.querySelector('.market__item-success')) {
-        e.target.after(success);
+      if (!e.target.closest('.market__item').querySelector('.market__item-success')) {
+        e.target.closest('.market__item').append(success);
         setTimeout(function () {
           success.remove();
         }, 3000);
@@ -2289,6 +2290,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       wrap.style.transform = "translateX(-".concat(count * widthItem, "px)");
       dotShows(count);
+    });
+  }); //console.log
+
+  document.querySelectorAll('.btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log(1);
     });
   });
 });

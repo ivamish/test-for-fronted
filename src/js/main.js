@@ -36,15 +36,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     document.querySelectorAll('.market__item-btn').forEach(el => {
         el.addEventListener('click', e => {
-            const count = +e.target.parentNode.querySelector('.market__item-count span').innerHTML;
+            e.stopPropagation();
+            const count = +e.target.closest('.market__item').querySelector('.market__item-count span').innerHTML;
             const cartCount = document.querySelector('.nav__cart-count');
             const success = document.createElement('div');
             success.classList.add('market__item-success');
             success.innerHTML = "Товар добавлен в корзину!";
             cartCount.innerHTML = +cartCount.innerHTML + count;
 
-            if(!e.target.parentNode.querySelector('.market__item-success')){
-                e.target.after(success);
+            if(!e.target.closest('.market__item').querySelector('.market__item-success')){
+                e.target.closest('.market__item').append(success);
                 setTimeout(() => {
                     success.remove();
                 }, 3000);
@@ -155,5 +156,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
             wrap.style.transform = `translateX(-${count * widthItem}px)`;
             dotShows(count);
         })
+    });
+
+    //console.log
+
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', (e)=>{
+            e.preventDefault();
+            console.log(1);
+        });
     });
 });
